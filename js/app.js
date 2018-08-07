@@ -34,6 +34,16 @@ if (answerThree === 'y' || answerThree === 'yes') {
 }
 console.log ('User was asked whether Nate is Nate-y and provided ' +answerThree+ ' as a response.');
 
+// Fourth Question, but I don't feel like renaming all my variables, so I'm calling this Third point first question.
+
+var answerThreePointOne = prompt('Is my favorite color Blue?').toLowerCase();
+if (answerThreePointOne === 'y' || answerThreePointOne === 'yes') {
+    alert ('BLUE is correct!!');
+} else {
+    alert ('No! The correct answer is that BLUE is my favorite color!');
+}
+console.log ('User was asked about my favorite color and provided ' +answerThreePointOne+ 'as a response.');
+
 // Fourth Question
 var answerFour = prompt('Does Nate have cats or dogs? Yes, I know this is not a yes / no question. It is still binary. Just answer. Cats or Dogs.').toLowerCase();
 if (answerFour === 'c' || answerFour === 'cat' || answerFour === 'cats') {
@@ -53,3 +63,7 @@ if (answerFive === 'y' || answerFive === 'yes') {
     alert ('YEEEESSSSSS!!!');
 }
 console.log ('User was asked whether they preferred to answer with "YES" or "NO" and given an extreme, opposite response to their input of ' +answerFive+ '.');
+
+// Final alerts
+alert ('Now look at the webpage to see how you did on the quiz!');
+alert ('The questions were a quiz by the way.');
