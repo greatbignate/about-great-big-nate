@@ -1,5 +1,26 @@
+body {
+    background-color: lightsteelblue;
+    
+}
+
 h1 {
-    color: blue
+    color: blue;
+    text-align: center;
+    font-size: 50px; 
+    letter-spacing: 2px; 
+    line-height: 5.0;  
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.0;
+}
+
+p.handle {
+    text-align: center;
+    font-size: 30px;
+    line-height: 2.0;
 }
 
 img {
@@ -9,6 +30,13 @@ img {
     width: 40%;
     }
 
-.screwy {
+img.screwy {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    
+}
 
+p.photoscript {
+    font-size: 12px;
+    line-height: 3.0;    
 }
