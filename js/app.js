@@ -10,7 +10,7 @@ alert('What is up ' +userName+ '. Check it out, I am gonna ask you some question
 // First question
 var answerOne = prompt('Is Nate Great?').toLowerCase();
 if (answerOne === 'y' || answerOne === 'yes') {
-    alert ('yeah...');
+    alert ('Durn tootin!');
 } else {
     alert ('SHUT YO MOUTH FOOL!');
 }
@@ -21,7 +21,7 @@ var answerTwo = prompt('Is Nate Big?').toLowerCase();
 if (answerTwo === 'y' || answerTwo === 'yes') {
     alert ('Yup');
 } else {
-    alert ('SHUT YO MOUTH FOOL!');
+    alert ('You are wrong. Nate is 6ft 3in and 235lbs. He is a pretty big dude.');
 }
 console.log ('User was asked whether Nate is big and provided ' +answerTwo+ ' as a response.');
 
@@ -30,19 +30,9 @@ var answerThree = prompt('Is Nate very Nate-y?').toLowerCase();
 if (answerThree === 'y' || answerThree === 'yes') {
     alert ('Correcto Mundo!');
 } else {
-    alert ('SHUT YO MOUTH FOOL!');
+    alert ('Nate is the Natiest Nate to have ever Nated. What exactly is your problem?');
 }
 console.log ('User was asked whether Nate is Nate-y and provided ' +answerThree+ ' as a response.');
-
-// Fourth Question, but I don't feel like renaming all my variables, so I'm calling this Third point first question.
-
-var answerThreePointOne = prompt('Is my favorite color Blue?').toLowerCase();
-if (answerThreePointOne === 'y' || answerThreePointOne === 'yes') {
-    alert ('BLUE is correct!!');
-} else {
-    alert ('No! The correct answer is that BLUE is my favorite color!');
-}
-console.log ('User was asked about my favorite color and provided ' +answerThreePointOne+ 'as a response.');
 
 // Fourth Question
 var answerFour = prompt('Does Nate have cats or dogs? Yes, I know this is not a yes / no question. It is still binary. Just answer. Cats or Dogs.').toLowerCase();
@@ -56,13 +46,41 @@ if (answerFour === 'c' || answerFour === 'cat' || answerFour === 'cats') {
 console.log ('User was asked a different binary question this time. User provided ' +answerFour+ ' as a response between a binary choice of "CATS" or "DOGS" and was confirmed correct or incorrect or mocked accordingly.');
 
 // Fifth Question
-var answerFive = prompt('Okay, ' +userName+ ', last question. Which word is cooler to say -- "YES" or "NO?"').toLowerCase();
+var answerFive = prompt('Do we need a fifth question?').toLowerCase();
+var safetyNumber = 0
+console.log ('User was asked whether we needed a fifth question and answered with ' +answerFive);
+while (answerFive != 'y' && answerFive != 'yes' && answerFive != 'n' && answerFive != 'no' && answerFive != 'nope') {
+    safetyNumber ++;
+    if (safetyNumber<10){
+    alert ('Come on, ' + userName + ', this is a simple Yes-or-No question! Try again.');
+    answerFive = prompt('Do we need a fifth question?').toLowerCase();
+    console.log('User did not input answer in Y/N format. This has happened ' +safetyNumber+ ' times.');
+    } else {
+        alert ('Whatever.');
+        answerFive = 'n';
+    }}
 if (answerFive === 'y' || answerFive === 'yes') {
-    alert ('NOOOOOOOOOO!!!');
-} else {
-    alert ('YEEEESSSSSS!!!');
+    alert ('I guess we did. Moving on...');
+} else if (answerFive === 'n' || answerFive === 'no' || answerFive === 'nope'){
+    alert ('Well, we had a fifth question anyway. Moving on...');
 }
-console.log ('User was asked whether they preferred to answer with "YES" or "NO" and given an extreme, opposite response to their input of ' +answerFive+ '.');
+
+// Sixth Question
+for (var tries = 0; tries <5; tries++) {
+    var pushUpGuess = random(1,10);
+    console.log(pushUpGuess);
+    answerSix = prompt('How many single-handed pushups can Nate do with his left arm on a given day?');
+    if (pushUpGuess == answerSix){
+        alert ('Wow! Great guess! Not even Nate knows the answer to that question!');
+        console.log('User was prompted to guess a random number which was ' +pushUpGuess+ ' in this case. User guessed the number after ' +tries+ ' tries.')
+        break
+    } else {
+        var triesLeft = 5-tries;
+        alert ('Good guess! Unfortunately, no one knows the answer to that question. Not even Nate! Try again!');
+        alert ('You have ' +triesLeft+ ' tries left.')
+        console.log('User failed to guess a random number which was ' +pushUpGuess+ ' in this case. User has' +triesLeft+ 'attempt remaining.');
+    }
+}
 
 // Final alerts
 alert ('Now look at the webpage to see how you did on the quiz!');
