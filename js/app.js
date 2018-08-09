@@ -69,7 +69,7 @@ if (answerFive === 'y' || answerFive === 'yes') {
 for (var tries = 0; tries <3; tries++) {
     var pushUpGuess = Math.ceil(5*Math.random());
     //console.log(pushUpGuess);
-    answerSix = prompt('How many single-handed pushups can Nate do with his left arm on a given day? Hint: Less than 6');
+    var answerSix = prompt('How many single-handed pushups can Nate do with his left arm on a given day? Hint: Less than 6');
     if (pushUpGuess == answerSix){
         alert ('Wow! Great guess! Not even Nate knows the answer to that question!');
         console.log('User was prompted to guess a random number which was ' +pushUpGuess+ ' in this case. User guessed the number after ' +tries+ ' tries.')
@@ -82,6 +82,39 @@ for (var tries = 0; tries <3; tries++) {
     }
 }
 
+// Seventh Question
+
+// Initial variables set
+var answerSeven = [];
+var faveMovies = ['shane','casablanca','the godfather','godfather','thegodfather','star wars','starwars','pulp fiction','pulpfiction'];
+var triesLeft = 5;
+var movGuess = prompt('Guess my top five movies! What is your first guess? You have -6- tries remaining!').toLowerCase();
+
+// They get 6 guesses
+while (triesLeft>=0) {
+
+    answerSeven.push(movGuess); //Answer Seven will ultimately be an array of thier 6 guesses.
+    i=0;
+    
+    // This while loop should compare the current movGuess try to each of the faveMovie entries.
+    for (var i=0 ; i < 9 ; i++) {
+        if (movGuess === faveMovies[i]){
+            alert('Wow! Great guess!'); // Acknowledges a correct guess    
+            break
+        }
+    }
+
+    if (movGuess === faveMovies[i]){
+        break
+    }
+   
+
+    // Now that the current movGuess has been compared to the possible answers, we need to move on to the next guess.    
+    var movGuess = prompt('What is your next guess? You have ' +triesLeft+ ' attempts remaining!').toLowerCase();
+    triesLeft--;
+}
+
+alert ('Recap: My favorite movies are: Shane, Casablanca, The Godfather, Star Wars, and Pulp Fiction! You guessed ' +answerSeven+ '. Good guessing!');
 // Final alerts
 alert ('Now look at the webpage to see how you did on the quiz!');
 alert ('The questions were a quiz by the way.');
