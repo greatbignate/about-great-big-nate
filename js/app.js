@@ -66,7 +66,7 @@ if (answerFive === 'y' || answerFive === 'yes') {
 }
 
 // Sixth Question
-for (var tries = 0; tries <3; tries++) {
+for (var tries = 0; tries <= 3; tries++) {
     var pushUpGuess = Math.ceil(5*Math.random());
     //console.log(pushUpGuess);
     var answerSix = prompt('How many single-handed pushups can Nate do with his left arm on a given day? Hint: Less than 6');
@@ -75,12 +75,14 @@ for (var tries = 0; tries <3; tries++) {
         console.log('User was prompted to guess a random number which was ' +pushUpGuess+ ' in this case. User guessed the number after ' +tries+ ' tries.')
         break
     } else {
-        var triesLeft = 5-tries;
+        var triesLeft = 3-tries;
         alert ('Good guess! Unfortunately, no one knows the answer to that question. Not even Nate! Try again!');
         alert ('You have ' +triesLeft+ ' tries left.')
         console.log('User failed to guess a random number which was ' +pushUpGuess+ ' in this case. User has ' +triesLeft+ ' attempt remaining.');
     }
 }
+
+alert ('On to a new question!'); // Needed a transition
 
 // Seventh Question
 

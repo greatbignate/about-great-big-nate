@@ -35,7 +35,7 @@ p.pictext {
 }
 
 .columnR {
-    float:left;
+    float:right;
     width: 600px;
     
 }
@@ -47,4 +47,31 @@ img#seoul {
 
 img#cats {    
     width: 500px;
+}
+
+#places {
+    float: left;
+    width: 350px;
+    margin: 20px;
+}
+
+#movies {
+    float: left;
+    width: 350px;
+    margin: 20px;
+}
+
+#jobs {
+    float: left;
+    width: 350px;
+    margin: 20px;
+}
+
+.listHeader {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+li {
+    font-size: 15px;
 }
